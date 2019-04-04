@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Неопознанный енот](https://up.htmlacademy.ru/adaptive/16/user/978173).
-* Наставник: `Неизвестно`.
+* Наставник: [Витольд Демишкевич](https://htmlacademy.ru/profile/vitold).
 
 ---
 
