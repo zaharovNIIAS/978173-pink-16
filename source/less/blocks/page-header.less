@@ -4,7 +4,22 @@
 
 .page-header__logo{
   display: block;
-  padding: 20px 20px;
+  padding: 23px 20px;
   height: 23px;
-  cursor:pointer;
+  width: 75px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    .page-header__logo-image {
+      fill: #d22856;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+    .page-header__logo-image {
+      fill: #ffffff;
+    }
+  }
 }

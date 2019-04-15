@@ -4,14 +4,33 @@
 
 .main-nav__toggle{
   position: absolute;
-  top: -45px;
-  right: 20px;
-  height: 24px;
-  width: 24px;
-  background-image: url(../img/icon-menu-cross.svg);
+  top: -69px;
+  right: 0px;
+  height: 69px;
+  width: 64px;
+
   border: 0;
-  background-color: transparent;
   font-size:0;
+  background-color: transparent;
+
+  margin: 0px;
+  padding: 0px;
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    .main-nav__toggle-img {
+      fill: #d22856;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+    .main-nav__toggle-img {
+      fill: #ffffff;
+    }
+  }
 }
 
 .main-nav__list {
