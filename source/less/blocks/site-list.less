@@ -1,6 +1,6 @@
 .site-list {
   font-weight: bold;
-  border-top: 1px solid black;
+  border-top: 1px solid #000000;
 }
 
 .site-list a {
@@ -17,15 +17,16 @@
 
   &:hover,
   &:focus {
-    color: #ad2e54;
+    color: @main-pink-color;
   }
 
   &:active {
-    color: #6d3650;
+    color: @main-pink-color;
+    opacity: 0.3;
   }
 }
 
 .site-list__item{
-border-bottom: 1px solid black;
-border-top: 1px solid #485461;
+border-bottom: 1px solid #000000;
+border-top: 1px solid rgba(255,255,255,0.15);
 }

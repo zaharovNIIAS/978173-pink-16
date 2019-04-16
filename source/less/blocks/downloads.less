@@ -1,5 +1,5 @@
 .downloads{
-  background-color: #283645;
+  background-color: @main-dark-color;
   text-align: center;
 }
 
@@ -8,8 +8,8 @@
   display: block;
   margin-bottom: 35px;
   min-height: 462px;
-  background: url(../img/iphone-hand-mobile@1x.png) no-repeat 40% bottom,
-              url(../img/bg-back-mobile@1x.jpg) no-repeat center;
+  background: url('../img/iphone-hand-mobile@1x.png') no-repeat 40% bottom,
+              url('../img/bg-back-mobile@1x.jpg') no-repeat center;
 }
 
 .downloads__button {
@@ -27,12 +27,12 @@
   &:hover,
   &:focus {
     background-color: #ffffff;
-    color: #d22856;
+    color: @main-pink-color;
   }
 
   &:active {
     background-color: #ffffff;
-    color: #f2cdd4;
+    color: lighten(@main-pink-color, 30%);
   }
 }
 
@@ -49,8 +49,6 @@ padding: 0;
 
 width: 205px;
 min-height: 57px;
-
-font-size: 0;
 }
 
 .downloads__link{
@@ -61,22 +59,22 @@ font-size: 0;
 }
 
 .downloads__link--ios{
- background: url(../img/logo-apple.svg) no-repeat center;
+  background: url('../img/logo-apple.svg') no-repeat center;
 }
 
 .downloads__link--android{
-  background: url(../img/logo-android.svg) no-repeat center;
- }
+  background: url('../img/logo-android.svg') no-repeat center;
+}
 
- .downloads__link--windows{
-  background: url(../img/logo-microsoft.svg) no-repeat center;
- }
+.downloads__link--windows{
+  background: url('../img/logo-microsoft.svg') no-repeat center;
+}
 
- .downloads__description{
+.downloads__description{
   font-size: 14px;
   line-height: 24px;
   color: #ffffff;
 
   margin: 0px;
   padding: 20px;
- }
+}

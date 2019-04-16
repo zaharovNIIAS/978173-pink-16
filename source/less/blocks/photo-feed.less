@@ -2,20 +2,18 @@
   font-size: 14px;
   line-height: 30px;
   font-weight: 400;
-  color: #283645;
+  color: @main-dark-color;
 
   text-align: center;
 
   padding:20px 30px;
 }
+
 .photo-feed__list{
   display: flex;
   flex-direction: column;
 
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
+  .list-style-reset();
 }
 
 .photo-feed__item{
@@ -43,7 +41,7 @@
   margin: 0 20px;
   padding: 10px;
 
-  background-color: #f2f2f2;
+  background-color: @main-gray-color;
 }
 .photo-feed__username{
     margin: 0;
@@ -51,14 +49,14 @@
     font-size: 14px;
     line-height: 24px;
     font-weight: 700;
-    color: #283645;
+    color: @main-dark-color;
 }
 
 .photo-feed__duration{
 font-size: 12px;
 line-height: 24px;
 font-weight: 300;
-color: #283645;
+color: @main-dark-color;
 }
 
 .photo-feed__comment {
@@ -68,23 +66,27 @@ color: #283645;
   font-size: 14px;
   line-height: 24px;
   font-weight: 400;
-  color: #283645;
+  color: @main-dark-color;
 }
 
 .photo-feed__like-btn{
   height: 12px;
   width: 13px;
-  background-image: url(../img/icon-heart.svg);
-  background-color: #f2f2f2;
+
+  background-color: @main-gray-color;
+  background-image: url('../img/icon-heart.svg');
   background-position: top 0 left 0;
   background-repeat: no-repeat;
+
   border: 0;
   margin-right: 15px;
+
+  cursor: pointer;
 }
 
 .photo-feed__like-value{
 font-size: 12px;
 line-height: 24px;
 font-weight: 400;
-color: #d22856;
+color: @main-pink-color;
 }

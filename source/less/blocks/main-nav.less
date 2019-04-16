@@ -10,7 +10,6 @@
   width: 64px;
 
   border: 0;
-  font-size:0;
   background-color: transparent;
 
   margin: 0px;
@@ -21,21 +20,18 @@
   &:hover,
   &:focus {
     .main-nav__toggle-img {
-      fill: #d22856;
+      fill: @main-pink-color;
     }
   }
 
   &:active {
     opacity: 0.3;
     .main-nav__toggle-img {
-      fill: #ffffff;
+      fill: @main-pink-color;
     }
   }
 }
 
 .main-nav__list {
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
+  .list-style-reset();
 }
