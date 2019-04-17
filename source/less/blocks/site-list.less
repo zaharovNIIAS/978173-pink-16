@@ -1,0 +1,43 @@
+.site-list {
+  font-weight: bold;
+  border-top: 1px solid #000000;
+  list-style: none;
+}
+
+.site-list a {
+  display: block;
+  font-size: 18px;
+  line-height: 32px;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 0;
+  text-align: center;
+
+  &:hover,
+  &:focus {
+    color: @main-pink-color;
+  }
+
+  &:active {
+    color: @main-pink-color;
+    opacity: 0.3;
+  }
+}
+
+.site-list__item--active a {
+  &:hover,
+  &:focus {
+    color: #ffffff;
+  }
+
+  &:active {
+    color: #ffffff;
+    opacity: 1;
+  }
+}
+
+.site-list__item {
+  border-bottom: 1px solid #000000;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}

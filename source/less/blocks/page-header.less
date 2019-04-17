@@ -1,0 +1,26 @@
+.page-header {
+  background-color: @main-dark-color;
+}
+
+.page-header__logo {
+  display: block;
+  padding: 23px 20px;
+  height: 23px;
+  width: 75px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    .page-header__logo-image {
+      fill: @main-pink-color;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    .page-header__logo-image {
+      fill: #ffffff;
+    }
+  }
+}

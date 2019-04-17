@@ -1,0 +1,28 @@
+.copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.copyright__text {
+  margin-right: 15px;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  color: @main-dark-color;
+}
+
+.copyright__link {
+  width: 27px;
+  height: 34px;
+
+  &:hover {
+    .copyright__img {
+      fill: @main-dark-color;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
