@@ -1,13 +1,14 @@
 .photo-feed__motto {
+  width: 280px;
   font-size: 14px;
   line-height: 30px;
   font-weight: 400;
   color: @main-dark-color;
   text-align: center;
-  padding: 20px 30px;
-  margin: 0;
-  margin-top: 25px;
-  margin-bottom: 8px;
+  padding: 0;
+  margin: 0 auto;
+  padding-top: 45px;
+  padding-bottom: 28px;
 }
 
 .photo-feed__list {
@@ -95,4 +96,29 @@
   font-weight: 400;
   color: @main-pink-color;
   text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .photo-feed__motto {
+    width: 450px;
+    font-size: 18px;
+    margin: 0 auto;
+    padding-top: 92px;
+    padding-bottom: 55px;
+
+    & br {
+      display: none;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    .photo-feed__motto {
+  width: 585px;
+  padding-bottom: 67px;
+    }
+
+    & br {
+      display: block;
+    }
+  }
 }
