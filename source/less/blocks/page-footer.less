@@ -5,6 +5,10 @@
   min-height: 284px;
 }
 
+.page-footer--hidden {
+  display: none;
+}
+
 .page-footer__logo {
   margin-top: 40px;
   width: 146px;
@@ -34,4 +38,39 @@
   margin: 0;
   padding: 0;
   margin-top: 40px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer--hidden {
+    display: flex;
+  }
+
+  .page-footer {
+    flex-direction: row;
+    margin: 0 auto;
+    padding: 0;
+    width: 620px;
+    min-height: 134px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .page-footer__logo {
+    margin-top: 0;
+  }
+
+  .page-footer__social {
+    margin-top: 0;
+  }
+
+  .page-footer__copyright {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer {
+    width: 940px;
+    min-height: 197px;
+  }
 }

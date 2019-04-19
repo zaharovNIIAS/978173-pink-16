@@ -1,0 +1,135 @@
+.research-article {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .research-article {
+    display: block;
+    width: 100%;
+  }
+
+  .research-article__wrapper {
+    width: 620px;
+    margin: 0 auto;
+    margin-top: 59px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .research-article__timer-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 240px;
+    height: 278px;
+    background-image: url("../img/icon-timer.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  .research-article__timer-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    margin-top: 33px;
+    padding: 0;
+    padding-bottom: 10px;
+    width: 202px;
+    height: 202px;
+    font-size: 96px;
+    line-height: 150px;
+    font-weight: 700;
+    color: @main-pink-color;
+    background-image: url("../img/icon-editor-diagram-fill.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 202px 202px;
+  }
+
+  .research-article__text-wrapper {
+    width: 311px;
+  }
+
+  .research-article__title {
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    margin-top: 9px;
+  }
+
+  .research-article__text {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    color: @main-dark-color;
+    margin: 0;
+    padding: 0;
+    margin-top: 9px;
+  }
+
+  .research-article__link {
+    display: block;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    color: @main-pink-color;
+    margin: 0;
+    margin-top: 10px;
+    padding: 0;
+    text-decoration: underline;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .research-article {
+    background-color: @main-gray-color;
+  }
+
+  .research-article__wrapper {
+    width: 940px;
+    margin-top: 0;
+    padding: 67px 0;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .research-article__text-wrapper {
+    width: 530px;
+    margin-left: 65px;
+  }
+
+  .research-article__timer-img {
+  width: 300px;
+  height: 345px;
+  }
+
+  .research-article__title {
+  margin-top: 42px;
+  }
+
+  .research-article__timer-number {
+    width: 253px;
+    height: 265px;
+    background-size: 253px;
+    margin-top: 43px;
+    font-size: 120px;
+    line-height: 186px;
+  }
+
+  .research-article__text {
+    font-size: 18px;
+    line-height: 30px;
+    margin-top: 21px;
+  }
+
+  .research-article__link {
+    font-size: 18px;
+    line-height: 30px;
+    margin-top: 32px;
+  }
+}

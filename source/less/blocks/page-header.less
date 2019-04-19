@@ -24,3 +24,37 @@
     }
   }
 }
+
+@media (min-width: @tablet-width) {
+  .page-header__logo {
+    padding: 35px 20px;
+    height: 40px;
+    width: 150px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    position: absolute;
+  }
+
+  .page-header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 940px;
+    margin: 0 auto;
+  }
+
+  .page-header__logo {
+    padding: 0;
+    margin-top: 25px;
+    margin-right: 0;
+    margin-bottom: 45px;
+    margin-left: 130px;
+    height: 40px;
+    width: 146px;
+  }
+}
