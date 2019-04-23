@@ -2,6 +2,15 @@
   background-color: @main-dark-color;
 }
 
+.logo__tablet,
+.logo__desktop {
+  display: none;
+}
+
+.logo__mobile {
+  display: inline-block;
+}
+
 .page-header__logo {
   display: block;
   padding: 23px 20px;
@@ -9,8 +18,12 @@
   width: 75px;
   cursor: pointer;
 
-  &:hover,
-  &:focus {
+  & svg {
+    height: 23px;
+    width: 75px;
+  }
+
+  &:hover {
     .page-header__logo-image {
       fill: @main-pink-color;
     }
@@ -30,6 +43,20 @@
     padding: 35px 20px;
     height: 40px;
     width: 150px;
+
+    & svg {
+      height: 40px;
+      width: 150px;
+    }
+  }
+
+  .logo__mobile,
+  .logo__desktop {
+    display: none;
+  }
+
+  .logo__tablet {
+    display: inline-block;
   }
 }
 
@@ -39,6 +66,15 @@
     background-color: rgba(0, 0, 0, 0.3);
     z-index: 1;
     position: absolute;
+  }
+
+  .logo__mobile,
+  .logo__tablet {
+    display: none;
+  }
+
+   .logo__desktop {
+    display: inline-block;
   }
 
   .page-header__wrapper {
@@ -56,5 +92,10 @@
     margin-left: 130px;
     height: 40px;
     width: 146px;
+
+    & svg {
+      height: 40px;
+      width: 146px;
+    }
   }
 }
