@@ -34,3 +34,27 @@
     }
   }
 }
+
+@media (min-width: @tablet-width) {
+  .main-nav__toggle {
+    top: -84px;
+    right: 0;
+    height: 64px;
+    width: 64px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav {
+    position: initial;
+    margin-right: 130px;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav__list {
+    margin: 34px 0;
+  }
+}

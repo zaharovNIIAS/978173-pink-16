@@ -1,44 +1,99 @@
 .photo-feed__motto {
+  width: 280px;
   font-size: 14px;
   line-height: 30px;
   font-weight: 400;
   color: @main-dark-color;
   text-align: center;
-  padding: 20px 30px;
-  margin: 0;
-  margin-top: 25px;
-  margin-bottom: 8px;
+  padding: 0;
+  margin: 0 auto;
+  padding-top: 45px;
+  padding-bottom: 28px;
+}
+
+.photo-feed__photos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 320px;
+  margin: 0 auto;
+  margin-top: 21px;
+  padding: 0;
+  list-style: none;
+}
+
+.photo-feed__list-wrapper {
+  width: 100%;
 }
 
 .photo-feed__list {
   display: flex;
   flex-direction: column;
-  .list-style-reset();
+  align-items: center;
+  max-width: 280px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
 }
 
 .photo-feed__item {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.photo-feed__item--panorama {
+  position: relative;
+
+  &::before {
+    content: "Панорама дня";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 140px;
+    height: 36px;
+    background-color: @main-pink-color;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #ffffff;
+    right: 20px;
+    top: 0;
+  }
 }
 
 .photo-feed__link {
   display: flex;
   margin: 0 auto;
-  margin-top: 21px;
   padding: 0;
+}
 
-  &--panorama {
-    padding: 0;
-    margin: 0 auto;
-  }
+.photo-feed__img {
+  display: block;
+  width: 280px;
+  height: 180px;
+}
+
+.photo-feed__pinned-img {
+  display: block;
+  width: 320px;
+  height: 137px;
 }
 
 .photo-feed__text-wrapper {
   display: flex;
   flex-direction: column;
-  margin: 0 20px;
+  min-width: 260px;
+  margin: 0;
   padding: 10px;
   background-color: @main-gray-color;
+}
+
+.photo-feed__text-wrapper--pinned-photo {
+  margin: 0 20px;
 }
 
 .photo-feed__user {
@@ -95,4 +150,139 @@
   font-weight: 400;
   color: @main-pink-color;
   text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .photo-feed__motto {
+    width: 450px;
+    font-size: 18px;
+    margin: 0 auto;
+    padding-top: 92px;
+    padding-bottom: 55px;
+
+    & br {
+      display: none;
+    }
+  }
+
+  .photo-feed__photos,
+  .photo-feed__pinned-photo {
+    max-width: 660px;
+  }
+
+  .photo-feed__list {
+    max-width: 620px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+
+  .photo-feed__item {
+    width: 300px;
+  }
+
+  .photo-feed__item--panorama::before {
+    top: 57px;
+  }
+
+  .photo-feed__img {
+    display: block;
+    width: 300px;
+    height: 300px;
+  }
+
+  .photo-feed__pinned-img {
+    display: block;
+    width: 700px;
+    height: 509px;
+  }
+
+  .photo-feed__text-wrapper {
+    padding: 15px 20px;
+  }
+
+  .photo-feed__comment {
+    min-height: 50px;
+  }
+
+  .photo-feed__like {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .photo-feed__like-btn {
+    order: 1;
+    margin-right: 3px;
+    margin-top: 7px;
+  }
+
+  .photo-feed__text-wrapper--pinned-photo {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 16px 20px;
+    padding-bottom: 23px;
+  }
+
+  .photo-feed__text-wrapper--pinned-photo .photo-feed__comment {
+    order: 3;
+    min-width: 580px;
+    margin-top: -10px;
+  }
+
+  .photo-feed__text-wrapper--pinned-photo .photo-feed__like-btn {
+    margin-right: 0;
+    margin-left: 15px;
+    margin-top: 5px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .photo-feed__motto {
+    width: 585px;
+    padding-bottom: 67px;
+
+    & br {
+      display: block;
+    }
+  }
+
+  .photo-feed__photos,
+  .photo-feed__pinned-photo {
+    max-width: 1200px;
+  }
+
+  .photo-feed__list {
+    max-width: 940px;
+    margin-top: 0;
+  }
+
+  .photo-feed__item {
+    margin-top: 51px;
+  }
+
+  .photo-feed__item--panorama::before {
+    right: 130px;
+    top: 54px;
+  }
+
+  .photo-feed__text-wrapper--pinned-photo {
+    margin: 0 130px;
+    padding-bottom: 0;
+  }
+
+  .photo-feed__img {
+    height: 400px;
+  }
+
+  .photo-feed__pinned-img {
+    width: 1200px;
+    height: 506px;
+  }
+
+  .photo-feed__text-wrapper--pinned-photo .photo-feed__like-value {
+    margin-right: 4px;
+  }
 }
