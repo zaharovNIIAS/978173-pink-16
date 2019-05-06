@@ -88,6 +88,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    position: relative;
   }
 
   .photo-editor__buttons-wrapper {
@@ -107,10 +108,6 @@
     margin-right: 18px;
   }
 
-  .photo-upload__features-container {
-    margin-top: 66px;
-  }
-
   .photo-editor__button {
     width: 22px;
     height: 22px;
@@ -127,14 +124,33 @@
       height: 22px;
     }
 
+    &::after {
+      content: "";
+      position: absolute;
+      padding: 0;
+      height: 1px;
+      background-color: #dddfe0;
+      width: 273px;
+      top: 46px;
+      left: 6px;
+    }
+
     &:nth-child(2) {
       margin-top: -16px;
       margin-bottom: 63px;
     }
 
+    &:nth-child(2)::after {
+      top: 119px;
+    }
+
     &:last-child {
       margin-top: -17px;
-    margin-left: 21px;
+      margin-left: 21px;
+    }
+
+    &:last-child::after {
+      top: 189px;
     }
 
     &:last-child svg {
@@ -160,6 +176,7 @@
     margin-bottom: 71px;
     background-color: @main-dark-color;
   }
+
   .photo-editor__scale:last-child {
     margin-top: -3px;
   }
@@ -182,11 +199,91 @@
       background-color: @main-pink-color;
     }
   }
+
   .photo-editor__scale:first-child::before {
     left: 145px;
   }
 
   .photo-editor__scale:last-child::before {
     left: 95px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .photo-editor {
+    width: 410px;
+  }
+
+  .photo-editor__buttons-wrapper {
+    width: 55px;
+    margin-top: -11px;
+  }
+
+  .photo-editor__button {
+    width: 48px;
+    height: 48px;
+    margin-left: 9px;
+    margin-bottom: 44px;
+
+    & svg {
+      width: 48px;
+      height: 48px;
+    }
+
+    &:nth-child(2) {
+      margin-left: 13px;
+      width: 54px;
+      height: 47px;
+    }
+
+    &:nth-child(2) svg {
+      width: 54px;
+      height: 47px;
+    }
+
+    &:last-child {
+      width: 32px;
+      height: 33px;
+      margin-top: -35px;
+      margin-left: 9px;
+    }
+
+    &:last-child svg {
+      width: 32px;
+      height: 33px;
+    }
+
+    &::after {
+      width: 410px;
+      top: 59px;
+      left: 10px;
+    }
+
+    &:nth-child(2)::after {
+      top: 132px;
+    }
+
+    &:last-child::after {
+      top: 202px;
+    }
+  }
+
+  .photo-editor__scales-wrapper {
+    width: 288px;
+    margin-top: 23px;
+    margin-right: 20px;
+  }
+
+  .photo-editor__scale--active::before,
+  .photo-editor__scale::before {
+    left: 246px;
+  }
+
+  .photo-editor__scale:first-child::before {
+    left: 70px;
+  }
+
+  .photo-editor__scale:last-child::before {
+    left: 159px;
   }
 }
