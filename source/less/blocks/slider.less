@@ -39,3 +39,44 @@
   box-shadow: 0 0 0 3px @main-dark-color;
   background-color: #ffffff;
 }
+
+.slider__arrow {
+  display: none;
+}
+
+@media (min-width: @desktop-width) {
+  .slider__toggles {
+    display: none;
+  }
+
+  .slider__arrow {
+    position: absolute;
+    top: 173px;
+    display: block;
+    width: 22px;
+    height: 41px;
+    padding: 0;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    opacity: 0.3;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.1;
+    }
+  }
+
+  .slider__arrow--left {
+    left: 0;
+    background-image: url("../img/icon-review-arrow-left.svg");
+  }
+
+  .slider__arrow--right {
+    right: 0;
+    background-image: url("../img/icon-review-arrow-right.svg");
+  }
+}
