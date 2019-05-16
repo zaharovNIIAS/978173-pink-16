@@ -6,6 +6,7 @@
   <title>Мобильное приложение «PINK»</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <script src="js/picturefill.js"></script>
 </head>
 
 <body>
@@ -13,7 +14,7 @@
     <div class="page-header__container">
       <div class="page-header__wrapper">
         <a class="page-header__logo" href="index.html">
-          <svg xmlns="http://www.w3.org/2000/svg" width="74.426px" height="22.859px">
+          <svg xmlns="http://www.w3.org/2000/svg" width="74.426" height="22.859">
             <g class="logo__mobile">
               <path class="page-header__logo-image" fill="#FFFFFF"
                 d="M0,1.449c0-0.708,0.58-1.288,1.256-1.288h7.18c5.087,0,8.436,2.704,8.436,7.147v0.064 c0,4.861-4.057,7.373-8.854,7.373H2.544v6.825c0,0.708-0.58,1.288-1.288,1.288C0.58,22.859,0,22.279,0,21.571V1.449z M8.114,12.428 c3.734,0,6.182-1.996,6.182-4.958V7.405c0-3.22-2.415-4.894-6.054-4.894H2.544v9.917H8.114z" />
@@ -76,15 +77,15 @@
           </svg>
         </a>
         <nav class="main-nav">
-          <button class="main-nav__toggle" type="button">
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-              width="23.867px" height="23.867px" viewBox="0 0 23.867 23.867" enable-background="new 0 0 23.867 23.867"
+          <!-- <button class="main-nav__toggle" type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23.867"
+              height="23.867" viewBox="0 0 23.867 23.867" enable-background="new 0 0 23.867 23.867"
               xml:space="preserve">
               <path class="main-nav__toggle-img" fill="#FFFFFF"
                 d="M15.087,11.933l8.56-8.559c0.293-0.293,0.293-0.768,0-1.061L21.554,0.22C21.414,0.079,21.223,0,21.023,0 c-0.199,0-0.391,0.079-0.529,0.22l-8.561,8.56l-8.56-8.56c-0.282-0.282-0.78-0.282-1.061,0L0.22,2.313 c-0.293,0.293-0.293,0.768,0,1.061l8.56,8.559l-8.56,8.559c-0.293,0.293-0.293,0.768,0,1.062l2.093,2.094 c0.141,0.142,0.331,0.22,0.53,0.22c0.199,0,0.39-0.078,0.53-0.22l8.561-8.56l8.56,8.56c0.141,0.142,0.332,0.22,0.53,0.22 c0.199,0,0.39-0.078,0.53-0.22l2.093-2.094c0.293-0.294,0.293-0.769,0-1.062L15.087,11.933z" />
             </svg>
             <span class="visually-hidden">Открыть меню</span>
-          </button>
+          </button> -->
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
               <a href="index.html">Главная</a>
@@ -134,32 +135,46 @@
             <legend class="contest__progress-heared">Ваши безбашенные достижения в путешествии</legend>
             <ul class="contest__progress-list">
               <li class="contest__progress-item">
-                <input class="visually-hidden" type="checkbox" name="progress-item-shark" id="progress-item-shark"
-                  checked>
-                <label for="progress-item-shark">Сделал селфи с акулой</label>
+                <label>
+                  <input class="visually-hidden" type="checkbox" name="progress-item-shark" checked>
+                  <span class="contest__square-border"></span>
+                  Сделал селфи с акулой
+                </label>
               </li>
               <li class="contest__progress-item">
-                <input class="visually-hidden" type="checkbox" name="progress-item-sunburnt" id="progress-item-sunburnt"
-                  checked>
-                <label for="progress-item-sunburnt">Обгорел на пляже</label>
+                <label>
+                  <input class="visually-hidden" type="checkbox" name="progress-item-sunburnt" checked>
+                  <span class="contest__square-border"></span>
+                  Обгорел на пляже
+                </label>
               </li>
               <li class="contest__progress-item">
-                <input class="visually-hidden" type="checkbox" name="progress-item-norris" id="progress-item-norris">
-                <label for="progress-item-norris">Видел Чака Норриса</label>
+                <label>
+                  <input class="visually-hidden" type="checkbox" name="progress-item-norris">
+                  <span class="contest__square-border"></span>
+                  Видел Чака Норриса
+                </label>
               </li>
               <li class="contest__progress-item">
-                <input class="visually-hidden" type="checkbox" name="progress-item-souvenir"
-                  id="progress-item-souvenir">
-                <label for="progress-item-souvenir">Накупил сувениров</label>
+                <label>
+                  <input class="visually-hidden" type="checkbox" name="progress-item-souvenir">
+                  <span class="contest__square-border"></span>
+                  Накупил сувениров
+                </label>
               </li>
               <li class="contest__progress-item">
-                <input class="visually-hidden" type="checkbox" name="progress-item-tower" id="progress-item-tower"
-                  checked>
-                <label for="progress-item-tower">Удержал башню</label>
+                <label>
+                  <input class="visually-hidden" type="checkbox" name="progress-item-tower" checked>
+                  <span class="contest__square-border"></span>
+                  Удержал башню
+                </label>
               </li>
               <li class="contest__progress-item">
-                <input class="visually-hidden" type="checkbox" name="progress-item-destroy" id="progress-item-destroy">
-                <label for="progress-item-destroy">Разгромил отель</label>
+                <label>
+                  <input class="visually-hidden" type="checkbox" name="progress-item-destroy">
+                  <span class="contest__square-border"></span>
+                  Разгромил отель
+                </label>
               </li>
             </ul>
           </fieldset>
@@ -168,12 +183,16 @@
           <legend class="contest__contacts-header">Контактная информация</legend>
           <ul class="contest__contacts-list">
             <li class="contest__contacts-item">
-              <label for="phone">Номер телефона</label>
-              <input type="tel" name="phone" id="phone" placeholder="Номер, пожалуйста">
+              <label>
+                <span>Номер телефона</span>
+                <input type="tel" name="phone" placeholder="Номер, пожалуйста">
+              </label>
             </li>
             <li class="contest__contacts-item">
-              <label for="email">Адрес почты</label>
-              <input type="email" name="email" id="email" placeholder="Введите почту *">
+              <label>
+                <span>Адрес почты</span>
+                <input type="email" name="email" placeholder="Введите почту *">
+              </label>
             </li>
           </ul>
         </fieldset>
@@ -182,27 +201,33 @@
             <legend class="contest__system-header">С каким приложением путешествовали?</legend>
             <ul class="contest__system-list">
               <li class="contest__system-item">
-                <input class="visually-hidden" type="radio" name="operating-system" id="operating-system-ios"
-                  value="iOS" checked>
-                <label for="operating-system-ios">Pink для iOS</label>
+                <label>
+                  <input class="visually-hidden" type="radio" name="operating-system" value="iOS" checked>
+                  <span class="contest__circle-border"></span>
+                  Pink для iOS
+                </label>
               </li>
               <li class="contest__system-item">
-                <input class="visually-hidden" type="radio" name="operating-system" id="operating-system-android"
-                  value="Android">
-                <label for="operating-system-android">Pink на Android</label>
+                <label>
+                  <input class="visually-hidden" type="radio" name="operating-system" value="Android">
+                  <span class="contest__circle-border"></span>
+                  Pink на Android
+                </label>
               </li>
               <li class="contest__system-item">
-                <input class="visually-hidden" type="radio" name="operating-system" id="operating-system-windows"
-                  value="Windows">
-                <label for="operating-system-windows">Windows Phone</label>
+                <label>
+                  <input class="visually-hidden" type="radio" name="operating-system" value="Windows">
+                  <span class="contest__circle-border"></span>
+                  Windows Phone
+                </label>
               </li>
             </ul>
 
           </fieldset>
         </div>
         <fieldset class="contest__feeling">
-          <legend class="contest__feeling-header" for="feeling">Опишите свои эмоции</legend>
-          <textarea class="contest__feeling-textarea" name="feeling" id="feeling"
+          <legend class="contest__feeling-header">Опишите свои эмоции</legend>
+          <textarea class="contest__feeling-textarea" name="feeling"
             placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
         </fieldset>
         <div class="contest__submit-container">
@@ -217,7 +242,7 @@
   </main>
   <footer class="page-footer">
     <a class="page-footer__logo" href="index.html">
-      <svg xmlns="http://www.w3.org/2000/svg" width="146.3px" height="40.375px">
+      <svg xmlns="http://www.w3.org/2000/svg" width="146.3" height="40.375">
         <g class="logo__mobile logo__tablet">
           <path class="page-footer__logo-img" fill="#283645"
             d="M71.874,18.661c0-0.708,0.58-1.288,1.256-1.288h7.18c5.087,0,8.436,2.704,8.436,7.146v0.063 c0,4.86-4.057,7.373-8.854,7.373h-5.475v6.825c0,0.708-0.58,1.287-1.289,1.287c-0.676,0-1.256-0.58-1.256-1.287L71.874,18.661 L71.874,18.661z M79.988,29.641c3.734,0,6.182-1.996,6.182-4.959v-0.062c0-3.221-2.414-4.894-6.053-4.894h-5.699v9.917h5.57V29.641 z" />
@@ -300,22 +325,26 @@
       </a>
     </p>
   </footer>
-  <section class="modal-error">
+  <section class="modal-error visually-hidden">
     <h2 class="visually-hidden">Ошибка отправки формы</h2>
     <b class="modal-error__title">Что-то пошло не так!</b>
     <p class="modal-error__text">
       Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
     </p>
-    <button class="modal-error__button">ОК</button>
+    <div class="modal-error__button-wrapper">
+      <button class="modal-error__button">ОК</button>
+    </div>
   </section>
-  <section class="modal-sucsess">
+  <section class="modal-sucsess visually-hidden">
     <h2 class="visually-hidden">Форма успешно отправлена</h2>
     <b class="modal-sucsess__title">Ваша заявка отправлена</b>
     <p class="modal-sucsess__text">
       Спасибо за ваше участие, ваша заявка уже поступила к нам.
-      В ближайшее время мы рассмотрим ее и оповестим вас.
+      В ближайшее время мы рассмотрим ее <br>и оповестим вас.
     </p>
-    <button class="modal-sucsess__button">Закрыть окно</button>
+    <div class="modal-sucsess__button-wrapper">
+      <button class="modal-sucsess__button">Закрыть окно</button>
+    </div>
   </section>
 </body>
 

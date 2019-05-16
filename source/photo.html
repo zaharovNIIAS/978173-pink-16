@@ -6,6 +6,7 @@
   <title>Мобильное приложение «PINK»</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <script src="js/picturefill.js"></script>
 </head>
 
 <body>
@@ -13,7 +14,7 @@
     <div class="page-header__container">
       <div class="page-header__wrapper">
         <a class="page-header__logo" href="index.html">
-          <svg xmlns="http://www.w3.org/2000/svg" width="74.426px" height="22.859px">
+          <svg xmlns="http://www.w3.org/2000/svg" width="74.426" height="22.859">
             <g class="logo__mobile">
               <path class="page-header__logo-image" fill="#FFFFFF"
                 d="M0,1.449c0-0.708,0.58-1.288,1.256-1.288h7.18c5.087,0,8.436,2.704,8.436,7.147v0.064 c0,4.861-4.057,7.373-8.854,7.373H2.544v6.825c0,0.708-0.58,1.288-1.288,1.288C0.58,22.859,0,22.279,0,21.571V1.449z M8.114,12.428 c3.734,0,6.182-1.996,6.182-4.958V7.405c0-3.22-2.415-4.894-6.054-4.894H2.544v9.917H8.114z" />
@@ -76,15 +77,15 @@
           </svg>
         </a>
         <nav class="main-nav">
-          <button class="main-nav__toggle" type="button">
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-              width="23.867px" height="23.867px" viewBox="0 0 23.867 23.867" enable-background="new 0 0 23.867 23.867"
+          <!-- <button class="main-nav__toggle" type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23.867"
+              height="23.867" viewBox="0 0 23.867 23.867" enable-background="new 0 0 23.867 23.867"
               xml:space="preserve">
               <path class="main-nav__toggle-img" fill="#FFFFFF"
                 d="M15.087,11.933l8.56-8.559c0.293-0.293,0.293-0.768,0-1.061L21.554,0.22C21.414,0.079,21.223,0,21.023,0 c-0.199,0-0.391,0.079-0.529,0.22l-8.561,8.56l-8.56-8.56c-0.282-0.282-0.78-0.282-1.061,0L0.22,2.313 c-0.293,0.293-0.293,0.768,0,1.061l8.56,8.559l-8.56,8.559c-0.293,0.293-0.293,0.768,0,1.062l2.093,2.094 c0.141,0.142,0.331,0.22,0.53,0.22c0.199,0,0.39-0.078,0.53-0.22l8.561-8.56l8.56,8.56c0.141,0.142,0.332,0.22,0.53,0.22 c0.199,0,0.39-0.078,0.53-0.22l2.093-2.094c0.293-0.294,0.293-0.769,0-1.062L15.087,11.933z" />
             </svg>
             <span class="visually-hidden">Открыть меню</span>
-          </button>
+          </button> -->
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
               <a href="index.html">Главная</a>
@@ -116,9 +117,16 @@
         <li class="photo-feed__pinned-photo photo-feed__item--panorama">
           <a href="#" class="photo-feed__pinned-link">
             <picture>
-              <source media="(min-width: 1200px)" srcset="img/panorama-desktop@1x.jpg">
-              <source media="(min-width: 660px)" srcset="img/panorama-tablet@1x.jpg">
-              <img class="photo-feed__pinned-img" src="img/panorama-mobile@1x.jpg" alt="" width="320" height="137">
+              <!-- <source type="image/webp" media="(min-width: 1200px)"
+                srcset="img/panorama-desktop@1x.webp 1x, img/panorama-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 660px)"
+                srcset="img/panorama-tablet@1x.webp 1x, img/panorama-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/panorama-mobile@1x.webp 1x, img/panorama-mobile@2x.webp 2x"> -->
+              <source media="(min-width: 1200px)"
+                srcset="img/panorama-desktop@1x.jpg 1x, img/panorama-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/panorama-tablet@1x.jpg 1x, img/panorama-tablet@2x.jpg 2x">
+              <img class="photo-feed__pinned-img" src="img/panorama-mobile@1x.jpg"
+                srcset="img/panorama-mobile@2x.jpg 2x" alt="" width="320" height="137">
             </picture>
           </a>
           <div class="photo-feed__text-wrapper photo-feed__text-wrapper--pinned-photo">
@@ -143,9 +151,17 @@
             <li class="photo-feed__item">
               <a href="#" class="photo-feed__link">
                 <picture>
-                  <source media="(min-width: 1200px)" srcset="img/photo-car-desktop@1x.jpg">
-                  <source media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.jpg">
-                  <img class="photo-feed__img" src="img/photo-car-mobile@1x.jpg" alt="" width="280" height="180">
+                  <!-- <source type="image/webp" media="(min-width: 1200px)"
+                    srcset="img/photo-car-desktop@1x.webp 1x, img/photo-car-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 660px)"
+                    srcset="img/photo-car-tablet@1x.webp 1x, img/photo-car-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/photo-car-mobile@1x.webp 1x, img/photo-car-mobile@2x.webp 2x"> -->
+                  <source media="(min-width: 1200px)"
+                    srcset="img/photo-car-desktop@1x.jpg 1x, img/photo-car-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)"
+                    srcset="img/photo-car-tablet@1x.jpg 1x, img/photo-car-tablet@2x.jpg 2x">
+                  <img class="photo-feed__img" src="img/photo-car-mobile@1x.jpg" srcset="img/photo-car-mobile@2x.jpg 2x"
+                    alt="" width="280" height="180">
                 </picture>
               </a>
               <div class="photo-feed__text-wrapper">
@@ -167,9 +183,18 @@
             <li class="photo-feed__item">
               <a href="#" class="photo-feed__link">
                 <picture>
-                  <source media="(min-width: 1200px)" srcset="img/photo-drumset-desktop@1x.jpg">
-                  <source media="(min-width: 660px)" srcset="img/photo-drumset-tablet@1x.jpg">
-                  <img class="photo-feed__img" src="img/photo-drumset-mobile@1x.jpg" alt="" width="280" height="180">
+                  <!-- <source type="image/webp" media="(min-width: 1200px)"
+                    srcset="img/photo-drumset-desktop@1x.webp 1x, img/photo-drumset-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 660px)"
+                    srcset="img/photo-drumset-tablet@1x.webp 1x, img/photo-drumset-tablet@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="img/photo-drumset-mobile@1x.webp 1x, img/photo-drumset-mobile@2x.webp 2x"> -->
+                  <source media="(min-width: 1200px)"
+                    srcset="img/photo-drumset-desktop@1x.jpg 1x, img/photo-drumset-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)"
+                    srcset="img/photo-drumset-tablet@1x.jpg 1x, img/photo-drumset-tablet@2x.jpg 2x">
+                  <img class="photo-feed__img" src="img/photo-drumset-mobile@1x.jpg"
+                    srcset="img/photo-drumset-mobile@2x.jpg 2x" alt="" width="280" height="180">
                 </picture>
               </a>
               <div class="photo-feed__text-wrapper">
@@ -191,9 +216,18 @@
             <li class="photo-feed__item">
               <a href="#" class="photo-feed__link">
                 <picture>
-                  <source media="(min-width: 1200px)" srcset="img/photo-window-desktop@1x.jpg">
-                  <source media="(min-width: 660px)" srcset="img/photo-window-tablet@1x.jpg">
-                  <img class="photo-feed__img" src="img/photo-window-mobile@1x.jpg" alt="" width="280" height="180">
+                  <!-- <source type="image/webp" media="(min-width: 1200px)"
+                    srcset="img/photo-window-desktop@1x.webp 1x, img/photo-window-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 660px)"
+                    srcset="img/photo-window-tablet@1x.webp 1x, img/photo-window-tablet@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="img/photo-window-mobile@1x.webp 1x, img/photo-window-mobile@2x.webp 2x"> -->
+                  <source media="(min-width: 1200px)"
+                    srcset="img/photo-window-desktop@1x.jpg 1x, img/photo-window-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)"
+                    srcset="img/photo-window-tablet@1x.jpg 1x, img/photo-window-tablet@2x.jpg 2x">
+                  <img class="photo-feed__img" src="img/photo-window-mobile@1x.jpg"
+                    srcset="img/photo-window-mobile@2x.jpg 2x" alt="" width="280" height="180">
                 </picture>
               </a>
               <div class="photo-feed__text-wrapper">
@@ -215,9 +249,17 @@
             <li class="photo-feed__item">
               <a href="#" class="photo-feed__link">
                 <picture>
-                  <source media="(min-width: 1200px)" srcset="img/photo-fair-desktop@1x.jpg">
-                  <source media="(min-width: 660px)" srcset="img/photo-fair-tablet@1x.jpg">
-                  <img class="photo-feed__img" src="img/photo-fair-mobile@1x.jpg" alt="" width="280" height="180">
+                  <!-- <source type="image/webp" media="(min-width: 1200px)"
+                    srcset="img/photo-fair-desktop@1x.webp 1x, img/photo-fair-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 660px)"
+                    srcset="img/photo-fair-tablet@1x.webp 1x, img/photo-fair-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/photo-fair-mobile@1x.webp 1x, img/photo-fair-mobile@2x.webp 2x"> -->
+                  <source media="(min-width: 1200px)"
+                    srcset="img/photo-fair-desktop@1x.jpg 1x, img/photo-fair-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)"
+                    srcset="img/photo-fair-tablet@1x.jpg 1x, img/photo-fair-tablet@2x.jpg 2x">
+                  <img class="photo-feed__img" src="img/photo-fair-mobile@1x.jpg"
+                    srcset="img/photo-fair-mobile@2x.jpg 2x" alt="" width="280" height="180">
                 </picture>
               </a>
               <div class="photo-feed__text-wrapper">
@@ -239,9 +281,17 @@
             <li class="photo-feed__item">
               <a href="#" class="photo-feed__link">
                 <picture>
-                  <source media="(min-width: 1200px)" srcset="img/photo-pov-desktop@1x.jpg">
-                  <source media="(min-width: 660px)" srcset="img/photo-pov-tablet@1x.jpg">
-                  <img class="photo-feed__img" src="img/photo-pov-mobile@1x.jpg" alt="" width="280" height="180">
+                  <!-- <source type="image/webp" media="(min-width: 1200px)"
+                    srcset="img/photo-pov-desktop@1x.webp 1x, img/photo-pov-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 660px)"
+                    srcset="img/photo-pov-tablet@1x.webp 1x, img/photo-pov-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/photo-pov-mobile@1x.webp 1x, img/photo-pov-mobile@2x.webp 2x"> -->
+                  <source media="(min-width: 1200px)"
+                    srcset="img/photo-pov-desktop@1x.jpg 1x, img/photo-pov-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)"
+                    srcset="img/photo-pov-tablet@1x.jpg 1x, img/photo-pov-tablet@2x.jpg 2x">
+                  <img class="photo-feed__img" src="img/photo-pov-mobile@1x.jpg" srcset="img/photo-pov-mobile@2x.jpg 2x"
+                    alt="" width="280" height="180">
                 </picture>
               </a>
               <div class="photo-feed__text-wrapper">
@@ -263,9 +313,17 @@
             <li class="photo-feed__item">
               <a href="#" class="photo-feed__link">
                 <picture>
-                  <source media="(min-width: 1200px)" srcset="img/photo-wing-desktop@1x.jpg">
-                  <source media="(min-width: 660px)" srcset="img/photo-wing-tablet@1x.jpg">
-                  <img class="photo-feed__img" src="img/photo-wing-mobile@1x.jpg" alt="" width="280" height="180">
+                  <!-- <source type="image/webp" media="(min-width: 1200px)"
+                    srcset="img/photo-wing-desktop@1x.webp 1x, img/photo-wing-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 660px)"
+                    srcset="img/photo-wing-tablet@1x.webp 1x, img/photo-wing-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/photo-wing-mobile@1x.webp 1x, img/photo-wing-mobile@2x.webp 2x"> -->
+                  <source media="(min-width: 1200px)"
+                    srcset="img/photo-wing-desktop@1x.jpg 1x, img/photo-wing-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)"
+                    srcset="img/photo-wing-tablet@1x.jpg 1x, img/photo-wing-tablet@2x.jpg 2x">
+                  <img class="photo-feed__img" src="img/photo-wing-mobile@1x.jpg"
+                    srcset="img/photo-wing-mobile@2x.jpg 2x" alt="" width="280" height="180">
                 </picture>
               </a>
               <div class="photo-feed__text-wrapper">
@@ -298,18 +356,25 @@
           <div class="photo-upload__wrapper">
             <div class="photo-upload__preview">
               <picture>
-                <source media="(min-width: 1200px)" srcset="img/photo-road-desktop@1x.jpg">
-                <source media="(min-width: 660px)" srcset="img/photo-road-tablet@1x.jpg">
-                <img class="photo-upload__preview-img" src="img/photo-road-mobile@1x.jpg" alt="" width="280"
-                  height="374">
+                <!-- <source type="image/webp" media="(min-width: 1200px)"
+                  srcset="img/photo-road-desktop@1x.webp 1x, img/photo-road-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)"
+                  srcset="img/photo-road-tablet@1x.webp 1x, img/photo-road-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-road-mobile@1x.webp 1x, img/photo-road-mobile@2x.webp 2x"> -->
+                <source media="(min-width: 1200px)"
+                  srcset="img/photo-road-desktop@1x.jpg 1x, img/photo-road-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)"
+                  srcset="img/photo-road-tablet@1x.jpg 1x, img/photo-road-tablet@2x.jpg 2x">
+                <img class="photo-upload__preview-img" src="img/photo-road-mobile@1x.jpg"
+                  srcset="img/photo-road-mobile@2x.jpg 2x" alt="" width="280" height="374">
               </picture>
             </div>
             <div class="photo-upload__features-container">
               <div class="photo-upload__filter photo-editor">
                 <div class="photo-editor__buttons-wrapper">
                   <button class="photo-editor__button photo-editor__button--active">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48px"
-                      height="48px" viewBox="0 0 48 48" enable-background="new 0 0 48 48">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48"
+                      height="48" viewBox="0 0 48 48" enable-background="new 0 0 48 48">
                       <path fill="none" d="M0,0h48v48H0V0z"></path>
                       <path class="photo-editor__button-img" fill="#283645"
                         d="M34,30h4V14c0-2.21-1.79-4-4-4H18v4h16V30z M14,34V2h-4v8H2v4h8v20c0,2.21,1.79,4,4,4h20v8h4v-8h8v-4H14z">
@@ -317,7 +382,7 @@
                     </svg>
                   </button>
                   <button class="photo-editor__button">
-                    <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="48px" height="48px" viewBox="0 0 48 48"
+                    <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="48" viewBox="0 0 48 48"
                       enable-background="new 0 0 48 48">
                       <path fill="none" d="M0,0h48v48H0V0z"></path>
                       <path class="photo-editor__button-img" fill="#283645"
@@ -327,7 +392,7 @@
                     </svg>
                   </button>
                   <button class="photo-editor__button">
-                    <svg version="1.0" width="31.92px" height="31.92px" viewBox="-35.422 -7.96 31.92 31.92"
+                    <svg version="1.0" width="31.92" height="31.92" viewBox="-35.422 -7.96 31.92 31.92"
                       enable-background="new -35.422 -7.96 31.92 31.92">
                       <path class="photo-editor__button-img" fill="#283645"
                         d="M-19.462-3.96c6.595,0,11.96,5.365,11.96,11.96s-5.365,11.96-11.96,11.96S-31.422,14.595-31.422,8 S-26.057-3.96-19.462-3.96 M-19.462-7.96c-8.814,0-15.96,7.145-15.96,15.96c0,8.813,7.146,15.96,15.96,15.96S-3.502,16.813-3.502,8 C-3.502-0.815-10.648-7.96-19.462-7.96L-19.462-7.96z">
@@ -358,7 +423,7 @@
   </main>
   <footer class="page-footer">
     <a class="page-footer__logo" href="index.html">
-      <svg xmlns="http://www.w3.org/2000/svg" width="146.3px" height="40.375px">
+      <svg xmlns="http://www.w3.org/2000/svg" width="146.3" height="40.375">
         <g class="logo__mobile logo__tablet">
           <path class="page-footer__logo-img" fill="#283645"
             d="M71.874,18.661c0-0.708,0.58-1.288,1.256-1.288h7.18c5.087,0,8.436,2.704,8.436,7.146v0.063 c0,4.86-4.057,7.373-8.854,7.373h-5.475v6.825c0,0.708-0.58,1.287-1.289,1.287c-0.676,0-1.256-0.58-1.256-1.287L71.874,18.661 L71.874,18.661z M79.988,29.641c3.734,0,6.182-1.996,6.182-4.959v-0.062c0-3.221-2.414-4.894-6.053-4.894h-5.699v9.917h5.57V29.641 z" />
