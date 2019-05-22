@@ -4,15 +4,6 @@
   margin: 0 auto;
 }
 
-.logo__tablet,
-.logo__desktop {
-  display: none;
-}
-
-.logo__mobile {
-  display: inline-block;
-}
-
 .page-header__logo {
   display: block;
   padding: 23px 20px;
@@ -31,14 +22,71 @@
     }
   }
 
-  &:active {
+  &:active svg {
     opacity: 0.3;
+  }
 
-    .page-header__logo-image {
-      fill: #ffffff;
-    }
+  &:active .page-header__logo-image {
+    fill: #ffffff;
   }
 }
+
+@media (max-width: @tablet-width-only) {
+  .page-header--nav-closed .page-header__container {
+    position: relative;
+  }
+
+  .page-header--nav-closed .page-header__wrapper {
+    position: relative;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 12;
+  }
+
+  .page-header--nav-closed .site-list,
+  .page-header--nav-closed .main-nav__close-img {
+    display: none;
+  }
+
+  .page-header--nav-closed .main-nav__open-img {
+    display: inline;
+  }
+
+  .page-header--nav-closed .main-nav__toggle {
+    right: 13px;
+  }
+
+  .page-header--nav-opened .page-header__container {
+    position: relative;
+    z-index: 1;
+  }
+
+  .page-header--nav-opened .page-header__wrapper {
+    position: static;
+    width: auto;
+    background-color: inherit;
+    z-index: 2;
+  }
+
+  .page-header--nav-opened .site-list {
+    display: block;
+  }
+
+  .page-header--nav-opened .main-nav__close-img {
+    display: inline;
+  }
+
+  .page-header--nav-opened .main-nav__open-img {
+    display: none;
+  }
+
+  .page-header--nav-nojs .main-nav__toggle,
+  .page-header--nav-nojs .main-nav__open-img,
+  .page-header--nav-nojs .main-nav__close-img {
+    display: none;
+  }
+}
+
 
 @media (min-width: @tablet-width) {
   .page-header__logo {
@@ -55,15 +103,6 @@
     }
   }
 
-  .logo__mobile,
-  .logo__desktop {
-    display: none;
-  }
-
-  .logo__tablet {
-    display: inline-block;
-  }
-
   .page-header__container {
     width: 660px;
   }
@@ -74,27 +113,24 @@
     position: relative;
   }
 
-  .logo__mobile,
-  .logo__tablet {
-    display: none;
-  }
-
-  .logo__desktop {
-    display: inline-block;
-  }
-
   .page-header__container {
     position: relative;
-    width: 1200px;
+    width: 100%;
+    max-width: 2560px;
   }
 
   .page-header__wrapper {
     width: 100%;
     background-color: rgba(0, 0, 0, 0.3);
     position: absolute;
+    z-index: 11;
+  }
+
+  .page-header__center {
+    width: 940px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    z-index: 11;
   }
 
   .page-header__logo {
@@ -102,7 +138,7 @@
     margin-top: 25px;
     margin-right: 0;
     margin-bottom: 45px;
-    margin-left: 130px;
+    margin-left: 0;
     height: 40px;
     width: 146px;
 

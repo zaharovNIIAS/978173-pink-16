@@ -1,26 +1,28 @@
 .page-title {
   width: 320px;
   margin: 0 auto;
+  margin-top: -69px;
+  position: relative;
   padding: 0;
-  min-height: 170px;
+  min-height: 239px;
   background-color: #2b3b4e;
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-size: 320px auto;
-  background-position: center -67px;
+  background-position: center 2px;
 
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
     background-image: url("../img/bg-back-mobile@2x.jpg");
     background-repeat: no-repeat;
     background-size: 320px auto;
-    background-position: center -67px;
+    background-position: center 2px;
   }
 }
 
 .page-title__description {
   width: 240px;
   margin: 0 auto;
-  padding-top: 28px;
+  padding-top: 97px;
   font-size: 24px;
   font-weight: 300;
   line-height: 30px;
@@ -31,19 +33,20 @@
 @media (min-width: @tablet-width) {
   .page-title {
     width: 660px;
-    min-height: 328px;
-    background: url("../img/bg-back-tablet@1x.jpg") no-repeat center -112px;
+    min-height: 437px;
+    margin-top: -109px;
+    background: #2b3b4e url("../img/bg-back-tablet@1x.jpg") no-repeat center -3px;
     background-size: 1200px auto;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background: url("../img/bg-back-tablet@2x.jpg") no-repeat center -112px;
+      background: #2b3b4e url("../img/bg-back-tablet@2x.jpg") no-repeat center -3px;
       background-size: 1200px auto;
     }
   }
 
   .page-title__description {
     width: 485px;
-    padding-top: 68px;
+    padding-top: 177px;
     font-size: 50px;
     line-height: 60px;
   }
@@ -51,13 +54,15 @@
 
 @media (min-width: @desktop-width) {
   .page-title {
-    width: 1200px;
+    width: 100%;
+    max-width: 2560px;
     min-height: 394px;
-    background: url("../img/bg-back-desktop@1x.jpg") no-repeat center top;
+    margin-top: 0;
+    background: #2b3b4e url("../img/bg-back-desktop@1x.jpg") no-repeat center top;
     background-size: 2560px auto;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background: url("../img/bg-back-desktop@2x.jpg") no-repeat center top;
+      background: #2b3b4e url("../img/bg-back-desktop@2x.jpg") no-repeat center top;
       background-size: 2560px auto;
     }
   }

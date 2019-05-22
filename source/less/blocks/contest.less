@@ -125,6 +125,10 @@
     border-color: @main-dark-color;
   }
 
+  & input:focus + .contest__square-border {
+    border-color: @main-dark-color;
+  }
+
   & input:active + .contest__square-border {
     border-color: @main-pink-color;
   }
@@ -253,6 +257,10 @@
     border-color: @main-dark-color;
   }
 
+  & input:focus + .contest__circle-border {
+    border-color: @main-dark-color;
+  }
+
   & input:active + .contest__circle-border {
     border-color: @main-pink-color;
   }
@@ -334,12 +342,17 @@
   border-radius: 1px;
   border: none;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: #1c9b5e;
   }
 
   &:active {
     color: rgba(255, 255, 255, 0.2);
+  }
+
+  &[disabled] {
+    background-color: #e5e5e5;
   }
 }
 
@@ -349,14 +362,14 @@
   color: @main-dark-color;
   text-transform: uppercase;
   text-align: center;
+}
 
-  &-mark {
-    color: @main-pink-color;
-  }
+.contest__required-mark {
+  color: @main-pink-color;
+}
 
-  &-hidden {
-    display: none;
-  }
+.contest__required-hidden {
+  display: none;
 }
 
 @media (min-width: @tablet-width) {
@@ -633,24 +646,53 @@
   }
 
   .contest__progress-list {
+    width: 820px;
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
-    flex-direction: column;
-    height: 170px;
+    flex-direction: row;
     margin-bottom: 11px;
   }
 
   .contest__progress-item {
     margin-bottom: 44px;
-    margin-right: 45px;
 
-    &:nth-child(n+3) {
-      margin-right: 25px;
+    &:nth-child(3n-2) {
+      width: 315px;
     }
 
-    &:nth-child(n+5) {
-      margin-right: 0;
+    &:nth-child(3n-1) {
+      width: 295px;
+    }
+
+    &:nth-child(3n) {
+      width: 210px;
+    }
+
+    &:nth-child(6) {
+      width: 210px;
+      order: 6;
+    }
+
+    &:nth-child(4) {
+      width: 295px;
+      order: 5;
+    }
+
+    &:nth-child(2) {
+      width: 315px;
+      order: 4;
+    }
+
+    &:nth-child(3) {
+      width: 295px;
+    }
+
+    &:nth-child(5) {
+      width: 210px;
+    }
+
+    &:nth-child(n+7) {
+      order: 7;
     }
 
     & label {
@@ -676,6 +718,10 @@
     width: 940px;
     margin-bottom: 0;
     margin-top: 65px;
+  }
+
+  .contest__required {
+    margin-top: 19px;
   }
 
   .contest__required-hidden {

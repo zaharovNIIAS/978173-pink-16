@@ -16,35 +16,29 @@
   padding: 0;
   background-color: transparent;
   border: none;
-  opacity: 0.3;
 
-  &:hover {
-    opacity: 1;
+  & svg {
+    opacity: 0.3;
+    fill: @main-dark-color;
   }
 
-  &:active {
+  &:hover svg,
+  &:focus svg {
     opacity: 0.5;
   }
 
-  & .photo-editor__button-img {
-    fill: @main-dark-color;
-  }
-
-  &:hover .photo-editor__button-img {
+  &:active svg {
+    opacity: 1;
     fill: @main-pink-color;
-  }
-
-  &:active .photo-editor__button-img {
-    fill: @main-dark-color;
   }
 }
 
-.photo-editor__button--active {
+.photo-editor__button--active svg,
+.photo-editor__button--active:hover svg,
+.photo-editor__button--active:focus svg,
+.photo-editor__button--active:active svg {
   opacity: 1;
-
-  & .photo-editor__button-img {
-    fill: @main-pink-color;
-  }
+  fill: @main-pink-color;
 }
 
 .photo-editor__scales-wrapper {
@@ -61,22 +55,21 @@
   height: 2px;
   margin: 0 auto;
   background-color: @main-dark-color;
-}
 
-.photo-editor__scale--active::before {
-  content: "";
-  box-sizing: border-box;
-  position: absolute;
-  top: -6px;
-  left: 189px;
-  width: 15px;
-  height: 15px;
-  border: solid 2px @main-pink-color;
-  border-radius: 50%;
-  background-color: @main-gray-color;
-  cursor: pointer;
+  & span {
+    box-sizing: border-box;
+    position: absolute;
+    top: -6px;
+    left: 189px;
+    width: 15px;
+    height: 15px;
+    border: solid 2px @main-pink-color;
+    border-radius: 50%;
+    background-color: @main-gray-color;
+    cursor: pointer;
+  }
 
-  &:hover {
+  & span:active {
     background-color: @main-pink-color;
   }
 }
@@ -122,6 +115,8 @@
     & svg {
       width: 22px;
       height: 22px;
+      fill: @main-pink-color;
+      opacity: 1;
     }
 
     &::after {
@@ -158,12 +153,11 @@
       height: 16px;
     }
 
-    & .photo-editor__button-img {
+    &:active svg,
+    &:hover svg,
+    &:focus svg {
       fill: @main-pink-color;
-    }
-
-    &:active .photo-editor__button-img {
-      fill: @main-pink-color;
+      opacity: 1;
     }
   }
 
@@ -181,8 +175,8 @@
     margin-top: -3px;
   }
 
-  .photo-editor__scale--active::before,
-  .photo-editor__scale::before {
+  .photo-editor__scale--active span,
+  .photo-editor__scale span {
     content: "";
     box-sizing: border-box;
     position: absolute;
@@ -194,17 +188,18 @@
     border-radius: 50%;
     background-color: @main-gray-color;
     cursor: pointer;
-
-    &:hover {
-      background-color: @main-pink-color;
-    }
   }
 
-  .photo-editor__scale:first-child::before {
+  .photo-editor__scale--active span:active,
+  .photo-editor__scale span:active {
+    background-color: @main-pink-color;
+  }
+
+  .photo-editor__scale:first-child span {
     left: 145px;
   }
 
-  .photo-editor__scale:last-child::before {
+  .photo-editor__scale:last-child span {
     left: 95px;
   }
 }
@@ -274,16 +269,16 @@
     margin-right: 20px;
   }
 
-  .photo-editor__scale--active::before,
-  .photo-editor__scale::before {
+  .photo-editor__scale--active span,
+  .photo-editor__scale span {
     left: 246px;
   }
 
-  .photo-editor__scale:first-child::before {
+  .photo-editor__scale:first-child span {
     left: 70px;
   }
 
-  .photo-editor__scale:last-child::before {
+  .photo-editor__scale:last-child span {
     left: 159px;
   }
 }

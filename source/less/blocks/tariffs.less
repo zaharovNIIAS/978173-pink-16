@@ -94,7 +94,7 @@
   }
 }
 
-.tariffs__feature td {
+.tariffs__features td {
   text-align: left;
   border-right: 2px solid #e5e5e5;
   border-bottom: 2px solid #e5e5e5;
@@ -112,7 +112,7 @@
   text-transform: uppercase;
 }
 
-.tariffs__feature td:first-child {
+.tariffs__features td:first-child {
   display: none;
   padding-left: 14px;
   border-left: 2px solid #e5e5e5;
@@ -194,7 +194,7 @@
     padding: 10px 0;
   }
 
-  .tariffs__feature td {
+  .tariffs__features td {
     width: 25%;
   }
 
@@ -202,7 +202,7 @@
     display: table-cell;
   }
 
-  .tariffs__feature td:first-child {
+  .tariffs__features td:first-child {
     display: table-cell;
     padding-top: 7px;
     padding-bottom: 8px;
@@ -237,6 +237,11 @@
   .tariffs__header--hit::after {
     top: 4px;
     left: -14px;
+  }
+
+  .tariffs__header--hit::before {
+    background-image: url("../img/bg-hit-tablet.svg");
+    background-repeat: no-repeat;
   }
 
   .tariffs__toggles {
@@ -294,9 +299,18 @@
     font-size: 18px;
   }
 
-  .tariffs__feature td:first-child {
+  .tariffs__features td:first-child {
     padding-left: 20px;
     padding-top: 14px;
     padding-bottom: 15px;
+  }
+
+  .tariffs__header--hit::after {
+    top: 14px;
+    left: -10px;
+  }
+
+  .tariffs__header--hit::before {
+    background-image: url("../img/bg-hit.svg");
   }
 }
